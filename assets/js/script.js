@@ -158,8 +158,18 @@ addBtn.addEventListener('click', (event) => {
     addTask();
 });
 
-filterBtn.addEventListener('click', filterTasks);
-deleteAllBtn.addEventListener('click', deleteAllTasks);
+
+filterBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    filterTasks();
+});
+
+deleteAllBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    deleteAllTasks();
+});
 
 
 document.addEventListener('DOMContentLoaded', renderTasks);
+
+
